@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../client/build')
 CORS(app)
 
 airport_df = pd.read_csv('airport_list.csv')
